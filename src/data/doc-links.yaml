@@ -23,4 +23,11 @@
       link: /docs/hs-range-picker/
 
 
+- title : 表单高级组件
+  items:
+    - title: hs-input
+      link: /docs/hs-input/
+
+
+
 

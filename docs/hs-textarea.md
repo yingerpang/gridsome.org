@@ -13,7 +13,7 @@
 |rules |验证规则|`[]`|`-`|N
 |style |组件样式|`{}`|`-`|N
 |allowClear   |点击清楚图标删除内容|boolean|`-`|N
-|`autoSize`   |高度|{}|`-`|autoSize:{minRows:1,maxRows:6}
+|`autoSize`   |高度|{}|`-`|N|autoSize:{minRows:1,maxRows:6}
 
 
 ## Textarea.rules
