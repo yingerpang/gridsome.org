@@ -1,0 +1,26 @@
+- title: 使用指南
+  items:
+    - title: 快速上手
+      link: /docs/
+
+- title : 表单组件
+  items:
+    - title: hs-input
+      link: /docs/hs-input/
+    - title:  hs-select
+      link: /docs/hs-select/
+    - title: hs-textarea
+      link: /docs/hs-textarea/
+    - title: hs-radio
+      link: /docs/hs-radio/
+    - title: hs-checkbox
+      link: /docs/hs-checkbox/
+    - title: hs-date-picker
+      link: /docs/hs-date-picker/
+    - title: hs-month-picker
+      link: /docs/hs-month-picker/
+    - title: hs-range-picker
+      link: /docs/hs-range-picker/
+
+
+

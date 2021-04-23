@@ -1,0 +1,74 @@
+# API
+## CheckBox
+
+|   参数    |   说明   |   类型 |  默认值  | 必填|备注
+|----------|------|-------|---------|-------|-----|
+|name      |组件名称，提交到后端的字段|string|`-`|Y
+|label     |标签文本|string|`-`|Y
+|hidden    |组件隐藏|boolean|`-`|N
+|`defaultValue`|默认值|`[]`|`-`|N
+|itemLayout  |表单元素宽度占比|`{}`|`-`|N|
+|disabled|是否禁用|boolean|`-`|N
+|rules |验证规则|`[]`|`-`|N
+|style |组件样式|`{}`|`-`|N
+|`data`   |组件数据源|`[]`|`[]`|N
+|`remote`   |组件异步获取需要配置的请求参数|`{}`|`-`|N
+
+
+## CheckBox.remote
+|   参数    |   说明   |   类型 | 必填 | 默认值
+|----------|------|-------|---------|-------
+|url |异步获取地址|string|Y|
+|params |异步获取参数|string|N
+|key |指定返回数据中取的key值名称|string|N
+|value |必选时，空格是否被视为错误|string|N
+
+## Radio.rules
+|   参数    |   说明   |   类型 |  案例
+|----------|------|-------|---------|-------
+|whitespace|必选时，空格是否被视为错误|boolean|{whitespace:true,message:'错误提示文字''}
+|len     |字段长度|string|{len:10,message:'错误提示文字''}
+|max    |最大长度|boolean|{max:20,message:'错误提示文字''}
+|min|最小长度          |string|{min:10,message:'错误提示文字''}
+|required|是否必填|string|{required:true,message:'错误提示文字''}
+|pattern  |自定义正则表达式校验|`{}`|{pattern:表达式,message:'错误提示文字''}
+
+
+
+## CheckBox.event
+|   参数    |   说明   |   类型
+|----------|------|-------|
+|@change|组件改变事件|function
+
+## Example
+### 静态数据
+```html
+<template>
+  <hs-checkbox
+    placeholder="请输入"
+    label="复选按钮"
+    name="key8"
+    :defaultValue="['5','6']"
+    :itemLayout="itemLayout"
+    :rules="[
+          {required: true, message: '请选择复选按钮' },
+         ]"
+    :data="radioItems"
+    @change="handleClick"/>
+</template>
+```
+### 远程数据获取
+```html
+<template>
+  <hs-checkbox
+    placeholder="请输入"
+    label="复选-远程"
+    name="key9"
+    :itemLayout="itemLayout"
+    :remote="{url:'/api/product/selectSupplier',key:'supplierCode',value:'supplierName'}"
+    :rules="[
+          {required: true, message: '请选择复选按钮' },
+         ]"
+    @change="handleClick"/>
+</template>
+```
