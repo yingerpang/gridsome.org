@@ -36,7 +36,7 @@ export default {
 .section {
   padding: calc(2% + var(--space)) 0;
   position: relative;
-  width: 100%;
+  width:500px;
   flex: 1;
 
   &--secondary {
