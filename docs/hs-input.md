@@ -37,6 +37,7 @@
 ### 文本框
 ```html
 <template>
+  <Button>111</Button>
   <hs-inputs
     placeholder="文本框"
     label="文本框1"
@@ -51,6 +52,9 @@
      ]"
     @change="handleClick"/>
 </template>
+<script>
+  console.log(111);
+</script>
 ```
 ### 带搜索按钮文本框
 ```html

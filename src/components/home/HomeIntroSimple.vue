@@ -18,6 +18,7 @@ query {
 
 <style lang="scss">
 .intro {
+  width:100%;
   padding: calc(2% + var(--space)) 0;
   display: flex;
   align-items: center;

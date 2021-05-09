@@ -7,7 +7,7 @@ import DocsLayout from '~/layouts/Docs.vue'
 import Section from '~/components/Section.vue'
 import Feature from '~/components/Feature.vue'
 import Card from '~/components/Card'
-
+import {transformComponent} from "./utils/component";
 import VueScrollTo from 'vue-scrollto'
 
 import Typography from 'typography'
@@ -28,7 +28,8 @@ export default function (Vue, { head, router, isServer }) {
   Vue.component('Card', Card)
 
   Vue.use(VueScrollTo)
-
+// 注册所有组件为海数自己内部组件
+  transformComponent(Vue)
   head.style.push({
     type: 'text/css',
     cssText: typography.toString()
